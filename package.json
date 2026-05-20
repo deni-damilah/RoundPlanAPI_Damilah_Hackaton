@@ -1,0 +1,24 @@
+{
+  "name": "roundplan-api-damilah-hackaton",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RoundPlan API server with auto-restart",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "start:pm2": "pm2 start server.js --name roundplan-api --watch --restart-delay 2000",
+    "logs": "pm2 logs roundplan-api",
+    "stop": "pm2 stop roundplan-api",
+    "delete": "pm2 delete roundplan-api"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
